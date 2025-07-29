@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brantone Omondi Opiyo - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .nav-menu {
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-menu.hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    /* Skills Section Styling */
+    .skill-card {
+      background: linear-gradient(145deg, #3b82f6, #8b5cf6);
+      color: white;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 0.9rem;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    @media (min-width: 640px) {
+      .skill-card {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold">Brantone Omondi Opiyo</h1>
+        </div>
+        <!-- Hamburger Menu for Mobile/Tablet -->
+        <div class="flex items-center md:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:space-x-4">
+          <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="#projects" class="text-gray-700 hover:text-blue-600">Projects</a>
+          <a href="#skills" class="text-gray-700 hover:text-blue-600">Skills</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+      <!-- Mobile/Tablet Menu -->
+      <div id="mobile-menu" class="nav-menu hidden md:hidden bg-white shadow-md">
+        <div class="flex flex-col space-y-4 py-4 px-4">
+          <a href="#about" class="text-gray-700 hover:text-blue-600 text-lg">About</a>
+          <a href="#projects" class="text-gray-700 hover:text-blue-600 text-lg">Projects</a>
+          <a href="#skills" class="text-gray-700 hover:text-blue-600 text-lg">Skills</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600 text-lg">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <div class="text-center px-4 fade-in">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">Hi, I'm Brantone Omondi Opiyo</h1>
+      <p class="text-lg sm:text-xl mb-6">Computer Science Student & AI/ML Enthusiast</p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100">Get in Touch</a>
+        <a href="c:\Users\HP\Documents\BRANTONE OMONDI OPIY1.cv.docx" download class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100">
+          <i class="fas fa-file-pdf mr-2"></i>Download My CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center fade-in">
+        <img src="Wha.jpg" alt="Brantone Omondi Opiyo" class="w-48 h-48 sm:w-64 sm:h-64 rounded-full mb-6 md:mb-0 md:mr-8">
+        <p class="text-base sm:text-lg">
+          I'm a Computer Science student at Meru University of Science and Technology, passionate about leveraging technology to solve real-world problems. I completed a course at Power Learn Project, specializing in Artificial Intelligence and Machine Learning. My expertise includes developing predictive models and data-driven solutions. In my free time, I explore new AI techniques and contribute to open-source projects on GitHub.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 sm:py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+      <p class="text-center text-base sm:text-lg mb-6">Check out my work on <a href="https://github.com/yourprofile" class="text-blue-600 hover:underline">GitHub</a>!</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+          <img src="policy-responsibility-guarding-362324981.webp" alt="ML Project 1" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2">Predictive Model for Classification</h3>
+          <p class="text-gray-600 mb-4 text-sm sm:text-base">A machine learning model for classifying data using scikit-learn and pandas, deployed on a cloud platform.</p>
+          <a href="https://github.com/Brantone1284/Ai-ethics" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+          <img src="590529_Thumb_400.webp" alt="ML Project 2" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2">Image Recognition System</h3>
+          <p class="text-gray-600 mb-4 text-sm sm:text-base">A deep learning project using TensorFlow and Keras for image classification tasks.</p>
+          <a href="https://github.com/Brantone1284/Final-project" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+          <img src="-equipment-to-patient.webp" alt="ML Project 3" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-lg sm:text-xl font-semibold mb-2">Natural Language Processing App</h3>
+          <p class="text-gray-600 mb-4 text-sm sm:text-base">An NLP application for sentiment analysis using NLTK and Python.</p>
+          <a href="https://github.com/Brantone1284/symptom-predict" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 fade-in">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Machine Learning</div>
+        <div class="skill-card">Deep Learning</div>
+        <div class="skill-card">scikit-learn</div>
+        <div class="skill-card">TensorFlow</div>
+        <div class="skill-card">Keras</div>
+        <div class="skill-card">Pandas</div>
+        <div class="skill-card">NLTK</div>
+        <div class="skill-card">Data Visualization</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">Git</div>
+        <div class="skill-card">Cloud Platforms</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 sm:py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+      <div class="max-w-lg mx-auto fade-in">
+        <p class="text-base sm:text-lg text-center mb-6">Feel free to reach out via email or connect with me on social media!</p>
+        <div class="flex flex-col items-center space-y-4">
+          <div class="flex justify-center space-x-6">
+            <a href="omoshbrantone.gmail.com" class="text-blue-600 hover:text-blue-800" aria-label="Email">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+            <a href="www.linkedin.com/in/brantone-omondi-54370233b" class="text-blue-600 hover:text-blue-800" aria-label="LinkedIn">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/Brantone1284" class="text-blue-600 hover:text-blue-800" aria-label="GitHub">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+          
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-600 text-sm sm:text-base">&copy; 2025 Brantone Omondi Opiyo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        // Close mobile menu after clicking a link
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Fade-in animation on scroll
+    const fadeIns = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeIns.forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
